@@ -8,7 +8,7 @@ class SMSAlertsModule extends \ExternalModules\AbstractExternalModule
 		$_GET['pid'] = $projectId;
 
 		// Set the last processed log so that logs after this point in time will be processed.
-		$this->setLastProcessedLogTimestamp($this->getCurrentTimestampFromDB());
+		$this->setLastProcessedLogTimestampToCurrentTime();
 
 		// Put the pid back the way it was before this cron job (likely doesn't matter, but wanted to be safe)
 		$_GET['pid'] = $originalPid;
