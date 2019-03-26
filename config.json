@@ -1,0 +1,45 @@
+{
+	"name": "SMS Alerts",
+
+	"namespace": "Vanderbilt\\SMSAlertsModule",
+
+	"framework-version": 2,
+
+	"authors": [
+		{
+			"name": "Mark McEver",
+			"email": "datacore@vumc.org",
+			"institution": "Vanderbilt University Medical Center"
+		}
+	],
+
+	"description": "Sends SMS Messages via Twilio under certain conditions.",
+
+	"permissions": [
+		"redcap_module_project_enable"
+	],
+
+	"crons": [
+		{
+			"cron_name": "cron",
+			"cron_description": "SMS Alerts External Module",
+			"method": "cron",
+			"cron_frequency": "1",
+			"cron_max_run_time": "300"
+		}
+	],
+
+	"project-settings": [
+		{
+			"key": "record-creation-alerts-enabled",
+			"name": "Send SMS alerts when records are created",
+			"type": "checkbox"
+		},
+		{
+			"key": "recipients",
+			"name": "Recipient Phone Numbers",
+			"type": "text",
+			"repeatable": true
+		}
+	]
+}
