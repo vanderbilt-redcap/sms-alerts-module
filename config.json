@@ -13,13 +13,14 @@
 		}
 	],
 
-	"description": "Sends SMS Messages via Twilio under certain conditions.",
+	"description": "<b>This module has programmatically disabled for now, but is left in place in for others to find and perhaps build upon in the future.</b> Sends SMS Messages via Twilio under certain conditions.",
 
 	"permissions": [
 		"redcap_module_project_enable"
 	],
 
-	"crons": [
+	"crons-disabled-comment": "The cron for this project has been disabled by changing the key below.  We're not currently using this module, and we don't want it unnecessarily running every minute.  We should re-think how often it runs if we build on it in the future.",
+	"crons-disabled": [
 		{
 			"cron_name": "cron",
 			"cron_description": "SMS Alerts External Module",
